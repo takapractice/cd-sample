@@ -66,7 +66,8 @@ jobs:
       - run:
           name: Push Artifactory
           command: |
-            ls -ltr
+            pwd
+            ls /home/circleci/ -ltr
       #      ./jfrog rt u "./backbeard.tar.gz" libs-released-local
       #- run:
       #    name: Copy File for S3
