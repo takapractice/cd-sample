@@ -48,6 +48,7 @@ jobs:
             sudo apt update
             sudo apt upgrade
             sudo apt install python-pip
+            sudo pip install --upgrade pip
             sudo apt install python-dev
             sudo pip install awscli
 
@@ -66,7 +67,7 @@ jobs:
           name: Push Artifactory
           command: |
             ./jfrog config add --artifactory-url https://taca17.jfrog.io/artifactory/ --user rockhop17g@gmail.com --apikey AKCp8ihLMCzJ3XhHSdPeFR7bRVA7YxKG6aQHCAp8bCJ4RP6HcPifzd7ro5CfUSnrV6KpJS2xR --interactive=false
-      #      ./jfrog rt u "backbeard.tar.gz" libs-released-local
+            ./jfrog rt u "backbeard.tar.gz" "libs-released-local"
       #- run:
       #    name: Copy File for S3
       #    command: |
