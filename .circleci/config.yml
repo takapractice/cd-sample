@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Archive source code
           command: |
-            cd ../ && tar cfz backbeard.tar.gz repo --exclude .git 
+            cd ../ && tar --exclude .git -cfz backbeard.tar.gz repo  
 
       - restore_cache:
           keys:
