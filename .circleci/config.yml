@@ -70,7 +70,8 @@ jobs:
       - run:
           name: Push Artifactory2
           command: |
-            ./jfrog rt u "./*.gz" libs-released-local/
+            ls -ltr
+      #      ./jfrog rt u "./*.gz" libs-released-local/
       #      ./jfrog rt u "backbeard.tar.gz" libs-released-local/{backbeard.tar.gz}/
       #- run:
       #    name: Copy File for S3
