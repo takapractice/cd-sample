@@ -90,6 +90,9 @@ jobs:
       - run:
           name: Install ansible
           command: |
+            sudo pip --version
+            sudo pip install --upgrade pip
+            sudo pip --version
             sudo pip install ansible
       - run:
           name: deploy master
