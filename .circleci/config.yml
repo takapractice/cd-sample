@@ -29,7 +29,8 @@ jobs:
       - run:
           name: Archive source code
           command: |
-            #ls -ltr ../
+            pwd
+            ls -ltr ../
             #cd ../ && tar --exclude .git --acls -cfz backbeard.tar.gz repo
             cd ../
             tar --exclude .git -cvzf backbeard.tar.gz ./repo
@@ -70,6 +71,7 @@ jobs:
       - run:
           name: Push Artifactory2
           command: |
+            pwd
             ls -ltr
       #      ./jfrog rt u "./*.gz" libs-released-local/
       #      ./jfrog rt u "backbeard.tar.gz" libs-released-local/{backbeard.tar.gz}/
