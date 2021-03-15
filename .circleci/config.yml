@@ -94,6 +94,13 @@ jobs:
             sudo pip install --upgrade pip
             sudo pip --version
             sudo pip install ansible
+
+      - run:
+          name: Push Artifactory3
+          command: |
+            ./jfrog rt dl libs-released-local/backbeard.tar.gz
+            ./jfrog rt dl libs-released-local/backbeard-staging.zip
+
       - run:
           name: deploy master
           command: cd ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i hosts deploy.yml --extra-vars "aws_access_key=${AWS_ACCESS_KEY_ID} aws_secret_key=${AWS_SECRET_ACCESS_KEY}"
