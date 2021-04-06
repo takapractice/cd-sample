@@ -112,7 +112,8 @@ jobs:
 
       - run:
           name: deploy master
-          command: cd ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i hosts deploy.yml --extra-vars "aws_access_key=${AWS_ACCESS_KEY_ID} aws_secret_key=${AWS_SECRET_ACCESS_KEY}"
+          #command: cd ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i hosts deploy.yml --extra-vars "aws_access_key=${AWS_ACCESS_KEY_ID} aws_secret_key=${AWS_SECRET_ACCESS_KEY}"
+          command: cd ansible/ && ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i hosts deploy.yml --extra-vars "aws_access_key=AKIAZZ3GLWMYUVVRU5P5 aws_secret_key=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"
 
 workflows:
   version: 2
